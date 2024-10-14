@@ -1,0 +1,60 @@
+.driver-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #e0f7fa; /* Light cyan background color */
+    padding: 20px;
+    min-height: 100vh; /* Ensure the background color covers the full height */
+}
+
+.dashboard-content {
+    width: 70%;
+}
+
+.dashboard-image {
+    width: 25%;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.table-row {
+    background-color: #fdfdfd;
+}
+
+.status-pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.status-accepted {
+    color: green;
+    font-weight: bold;
+}
+
+.status-enroute {
+    color: blue;
+    font-weight: bold;
+}
+
+.status-delivered {
+    color: purple;
+    font-weight: bold;
+}
+
+.status-select {
+    width: 100%;
+}
+
+.container {
+    color: #333;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}

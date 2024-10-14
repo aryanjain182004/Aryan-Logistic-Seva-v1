@@ -1,0 +1,34 @@
+.admin-dashboard {
+    background-color: #ffe6e6; /* Light pink background */
+}
+
+.avatar {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular avatar */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.row-light {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.row-dark {
+    background-color: #fff; /* White for odd rows */
+}
+
+.status-pending {
+    color: orange;
+}
+
+.status-accepted {
+    color: green;
+}
+
+.status-completed {
+    color: blue;
+}
+
+.status-cancelled {
+    color: red;
+}

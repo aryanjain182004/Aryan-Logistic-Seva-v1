@@ -1,0 +1,12 @@
+/* src/components/UserDashboard.css */
+.container {
+    margin-top: 20px;
+}
+
+.table {
+    background-color: #f8f9fa;
+}
+
+.card {
+    background-color: #e9ecef;
+}

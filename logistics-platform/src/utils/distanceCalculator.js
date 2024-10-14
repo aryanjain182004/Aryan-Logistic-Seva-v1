@@ -42,7 +42,7 @@ export const getDistanceBetweenLocations = async (pickup, dropoff) => {
         const { lat: dropoffLat, lon: dropoffLon } = dropoffCoords;
 
         // OSRM API call to get route/distance between the two coordinates
-        const response = await axios.get(`http://router.project-osrm.org/route/v1/driving/${pickupLon},${pickupLat};${dropoffLon},${dropoffLat}`, {
+        const response = await axios.get(`https://router.project-osrm.org/route/v1/driving/${pickupLon},${pickupLat};${dropoffLon},${dropoffLat}`, {
             params: {
                 overview: 'false'  // This reduces the size of the response, you only get the distance and duration
             }

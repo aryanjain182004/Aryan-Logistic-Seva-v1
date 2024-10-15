@@ -1,7 +1,18 @@
 import axios from 'axios';
 
+// Create a cache object
+const geocodeCache = {};
+
 // Function to get the coordinates (lat, lon) for an address using Nominatim (OSM geocoding)
 const getCoordinatesFromAddress = async (address) => {
+    // Check if the coordinates for the address are already in cache
+    if (geocodeCache[address]) {
+        console.log('Returning cached coordinates for address:', address);
+        return geocodeCache[address];
+    }
+
+    console.log('Fetching coordinates for address:', address); // Debug log
+
     try {
         const response = await axios.get(`https://nominatim.openstreetmap.org/search`, {
             params: {
@@ -11,10 +22,14 @@ const getCoordinatesFromAddress = async (address) => {
             }
         });
 
+        console.log('Nominatim response for address:', address, response.data); // Log the response
+
         const data = response.data;
 
         if (data && data.length > 0) {
             const { lat, lon } = data[0];
+            // Cache the result
+            geocodeCache[address] = { lat, lon };
             return { lat, lon };
         } else {
             console.error('Error finding coordinates for the address: ', address);
